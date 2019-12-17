@@ -9,10 +9,8 @@ const redis = require('./../../../../config/redisdb');
  * Returns all elements from the list
  */
 async function getAll(req, h) {
-    const results = await CourseModel.find({});
-return createAPIResponse(h, CourseModel.modelName, results, null, HTTPCodes.OK);
     try {
-        return createAPIResponse(h, CourseModel.modelName, await CourseModel.find({}), null, HTTPCodes.OK);
+        return await createAPIResponse(h, CourseModel.modelName, await CourseModel.find({}), null, HTTPCodes.OK);
     } catch {
         return boom.internal();
     }
@@ -24,8 +22,8 @@ return createAPIResponse(h, CourseModel.modelName, results, null, HTTPCodes.OK);
 async function add(req, h) {
     try {
         const validationSchema = {
-            name: Joi.string().min(10).required(),
-            description: Joi.string().min(30).required()
+            name: Joi.string().min(1).required(),
+            description: Joi.string().min(1).required()
         }
         const validation = Joi.validate(req.payload, validationSchema);
         // is not the payload valid?
