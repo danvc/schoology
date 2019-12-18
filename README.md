@@ -1,3 +1,5 @@
+![](https://images.squarespace-cdn.com/content/v1/5cb36dc993a63270cfacbc2b/1568407625291-IZ079BSO4AO5K6YIM0PD/ke17ZwdGBToddI8pDm48kC9qu2gvgDc1fHZgGjPXHQ5Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGsbjzQe8XprMihMEQ9UKdMwALN5jbWCRaeUKHWJatMjmVWdNHs25RwszbEzjDCTQI/Schoology?format=1000w)
+
 # Welcome to my Schoology project
 
 ## Prerequisites
@@ -138,4 +140,4 @@ To be working in the front-end, you'll need to do something else. Please, access
 - [ ] Choose a library to document the API (Swagger, API Blueprint, etc);
 
 # Thank you so much
-Independent the result, I really woud like to thank you by the opportunity that you gave me to implement this homework. I really would appreciate if you get a chance to see the details in the source code. I really loved to be working on this. 
+Independent the result, I really woud like to thank you by the opportunity that you gave me to implement this homework. I really would appreciate if you get a chance to see the details in the source code. I really loved ❤️ to be working on this. 
