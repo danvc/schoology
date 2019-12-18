@@ -27,9 +27,9 @@ The `building` process will move according these steps:
 - Populate the `MongoDB` with fake data.
 
 If everything wen't well, now you could access the `app` by opening the following url in your browser: `http://localhost:3000`. You will have access to the following page:
+![](https://i.ibb.co/qswbJjh/Kapture-2019-12-18-at-3-19-48.gif)
 
 
-echo Building React App && sleep 2 && cd app/ && yarn install && yarn build && cd .. && echo Building the Server environment && yarn install && docker-compose build && docker-compose up -d && echo Populating FAKE data && sleep 2 && docker exec -it NODE_WEBSERVER node ./config/generateFakeData.js &&  echo Fake data populated && sleep 1  && echo You are OK to go. Please, access http://localhost:3000"
 
 
 Adding a new course:
