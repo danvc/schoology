@@ -7,7 +7,7 @@
     "start": "node ./src/main.js",
     "startreload": "nodemon ./src/main.js",
     "test": "lab  -m 3000 -v ./tests/integration/v1/*.test.js",
-    "build": "cd app/ && yarn build && cd .. && echo Building the App environment && docker-compose build && docker-compose up -d && echo Populating FAKE data && sleep 2 && node config/generateFakeData.js &&  echo Fake data populated && sleep 1  && echo You are OK to go. Please, access http://localhost:3000"
+    "build": "echo Building React App && sleep 2 && cd app/ && yarn install && yarn build && cd .. && echo Building the Server environment && yarn install && docker-compose build && docker-compose up -d && echo Populating FAKE data && sleep 2 && node config/generateFakeData.js &&  echo Fake data populated && sleep 1  && echo You are OK to go. Please, access http://localhost:3000"
   },
   "dependencies": {
     "@hapi/boom": "^8.0.1",
