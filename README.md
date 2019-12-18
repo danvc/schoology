@@ -15,10 +15,17 @@ git clone https://github.com/DanZeuss/schoology.git
 ```
 It will download all the source code inside a folder named `schoology`.
 ### Second step
-Please, move to the `schoology` folder by running the command `cd schoology/` and then, run the following command:
+Before start the building process, please, be sure that there aren't services running in the ports `3000` (Node), `6379` (Redis) and `27017` (MongoDB). Now move to the `schoology` folder by running the command `cd schoology/` and then start the building process running the following command:
 ```
 yarn build
 ```
+The `building` process will move according these steps:
+- Installs all dependencies to build and deploy an optimized version of front-end build for production;
+- Installs all dependencies to build and deploy the server package for production;
+- Download and build all containers for the application. The `app` is using `MongoDB` as database and `Redis` for caching to speed up the API responses;
+- Move all config files inside the containers;
+
+echo Building React App && sleep 2 && cd app/ && yarn install && yarn build && cd .. && echo Building the Server environment && yarn install && docker-compose build && docker-compose up -d && echo Populating FAKE data && sleep 2 && docker exec -it NODE_WEBSERVER node ./config/generateFakeData.js &&  echo Fake data populated && sleep 1  && echo You are OK to go. Please, access http://localhost:3000"
 
 
 Adding a new course:
