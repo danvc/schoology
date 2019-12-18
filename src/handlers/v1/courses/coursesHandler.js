@@ -17,7 +17,7 @@ async function getAll(req, h) {
 };
 
 /**
- * Add a new class
+ * Add a new course
  */
 async function add(req, h) {
     try {

@@ -50,7 +50,7 @@ export default class SearchCourseField extends React.Component {
             <Autocomplete
                 id="search-course-field"
                 options={this.state.data}
-                getOptionLabel={option => { console.log(option); return option.name}}
+                getOptionLabel={option => { return option.name}}
                 style={{ width: 300 }}
                 loading={this.state.loading}
                 renderInput={params => (

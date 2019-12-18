@@ -6,19 +6,21 @@
   "scripts": {
     "start": "node ./src/main.js",
     "startreload": "nodemon ./src/main.js",
-    "test": "lab  -m 3000 -v ./tests/integration/v1/*.test.js"
+    "test": "lab  -m 3000 -v ./tests/integration/v1/*.test.js",
+    "build": "cd app/ && yarn build && cd .. && echo Building the App environment && docker-compose build && docker-compose up -d && echo Populating FAKE data && sleep 2 && node config/generateFakeData.js &&  echo Fake data populated && sleep 1  && echo You are OK to go. Please, access http://localhost:3000"
   },
   "dependencies": {
     "@hapi/boom": "^8.0.1",
-    "@hapi/code": "^7.0.0",
     "@hapi/hapi": "^18.4.0",
-    "@hapi/lab": "^21.0.0",
     "inert": "^5.1.3",
     "joi": "^14.3.1",
     "mongoose": "^5.8.1",
     "redis": "^2.8.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "faker": "^4.1.0",
+    "nodemon": "^2.0.2",
+    "@hapi/code": "^7.0.0",
+    "@hapi/lab": "^21.0.0"
   }
 }
