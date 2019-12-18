@@ -134,6 +134,15 @@ yarn startreload
 ```
 To be working in the front-end, you'll need to do something else. Please, access the `app` folder and then run `yarn start` to start the hotreload and the server for the static files.
 
+## Running tests
+There are tests specific for `API` and others tests for `React` components.
+To run the `API` tests, move to the root folder and run the following command:
+```
+yarn test
+```
+To run the test for `front-end`, please, move to the `/app` folder and run the same command.
+
+
 ## Todos (ideas)
 - [ ] Add `nginx` for loading balance with `nodejs`;
 - [ ] Automate the CI/CD using the Github webhooks with a server running Jenkins;
