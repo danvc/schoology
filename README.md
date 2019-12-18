@@ -28,7 +28,7 @@ The `building` process will move according these steps:
 - Move all config files inside the containers;
 - Populate the `MongoDB` with fake data.
 
-If everything wen't well, now you could access the `app` by opening the following url in your browser: `http://localhost:3000`. You will have access to the following page:
+If everything wen't well, now you could access the `app` by opening the following url in your browser: `http://localhost:3000`. You will have access to main page. The Search bar search for courses by using the `lazy search`technique. So you could be searching by characters that exists in the word, without writting it correctly.
 ![](https://i.ibb.co/qswbJjh/Kapture-2019-12-18-at-3-19-48.gif)
 
 
