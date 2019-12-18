@@ -126,3 +126,8 @@ To start the dev environment, we need to start the `MongoDB` and `Redis` contain
 ```
 docker-compose up -d db redis
 ```
+You also needs to start the Web application by running the command in the root:
+```
+yarn startreload
+```
+To be working in the front-end, you'll need to do something else. Please, access the `app` folder and then run `yarn start` to start the hotreload and the server for the static files.
