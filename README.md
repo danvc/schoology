@@ -78,7 +78,9 @@ SchoologyApp was implemented having in mind a way to separate and test each laye
     + build (generated automatically by running the build command);
     + public (static files such as `JavaScript`, `CSS`, `Images`, `Fonts`, `HTML`, etc;
     + src (main app folders and files - React/Redux/Helpers/Consts/Config/etc);
-        + __tests__;
+        + __tests__ (for unit tests or environment tests using Selenium, for example);
+            + unit (Jest/Jasmin)
+            + environment (Selenium)
         + components (which contains folders separated by its model business;
             + account (example)
             + courses (example)
@@ -96,5 +98,24 @@ SchoologyApp was implemented having in mind a way to separate and test each laye
     * models (contain database schema for each model)
         + classesModel.js
         + coursesModel.js
-
-    
+    * routes (contain files that serves routes for the main server. It's also versioned thinking in the contract of the API)
+        + v1
+            + classesRoute.js
+            + coursesRoute.js (contains an array of routes. Each route contains the path/verb and method defined)
+            + studentsRoute.js	
+        + v2
+        + v3
+    * tests (folder for unit, environment and integration tests);
+        + integration (to call and simulate the APIs);
+            + v1
+                + courses.test.js
+                + students.test.js
+            + v2
+            + v3
+        + unit (to call and simulate CRUDS and business implementations);
+            + v1
+                + courses.test.js
+                + students.test.js
+            + v2
+            + v3
+        + lib (contains helpers for tests);
