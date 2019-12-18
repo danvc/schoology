@@ -1,4 +1,4 @@
-# schoology
+# Welcome to my Schoology project
 
 ## Prerequisites
 Dear reviewer, please, make sure to have `yarn` installed in your environment. To install it, please run:
