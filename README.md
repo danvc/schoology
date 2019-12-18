@@ -131,3 +131,11 @@ You also needs to start the Web application by running the command in the root:
 yarn startreload
 ```
 To be working in the front-end, you'll need to do something else. Please, access the `app` folder and then run `yarn start` to start the hotreload and the server for the static files.
+
+## Todos (ideas)
+- [ ] Add `nginx` for loading balance with `nodejs`;
+- [ ] Automate the CI/CD using the Github webhooks with a server running Jenkins;
+- [ ] Choose a library to document the API (Swagger, API Blueprint, etc);
+
+# Thank you so much
+Independent the result, I really woud like to thank you by the opportunity that you gave me to implement this homework. I really would appreciate if you get a chance to see the details in the source code. I really loved to be working on this. 
