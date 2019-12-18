@@ -9,52 +9,31 @@ const routes = require('./routes/routes');
 const Inert = require('inert');
 const Path = require('path');
 
-
+// define the server and its settings
 const server = Hapi.server({
     // set the default values for PORT and HOST, which could be set as environment variable according the environment (PROD|TEST|DEV)
     port: process.env.HTTP_PORT || 3000,
     host: process.env.HOSTNAME || 'localhost',
     routes: {
         files: {
-            
+            // definition for static files
             relativeTo:Path.join(process.cwd(), '/app/build')
         }
     }
 });
-        
 
 /**
- * Initializes the server (starts the caches, finalizes plugin registration) but does not start listening on the connection port.
+ * Main call to start the server application
  */
-async function init() {
-    await server.initialize();
-    return server;
-}
-// export it just for tests purposes
-exports.init = init;
-
-/**
- *  Starts the server
- */
-async function start() {
-    await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
-    return server;
-}
-// export it just for tests purposes
-module.start = start;
-
 const appServer = async () => {
     try {
     
-        await init();
-
+        await server.initialize();
         // register the Inert plugin to serve a static file (in our case.. ou react application)
         await server.register(Inert);
 
         await connectDB();
         
-
         // we add a route for our static file
         routes.push({
             method: 'GET',
@@ -71,8 +50,8 @@ const appServer = async () => {
         server.route(routes);
 
         // starts the server
-        await start();
-        console.log('Server API running on %s', server.info.uri);
+        await server.start();        
+        console.log('API server running on %s', server.info.uri);
 
     } catch (error) {
         console.log('Something went wrong while starting the application:', error);

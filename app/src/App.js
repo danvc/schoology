@@ -6,16 +6,18 @@ import Drawer from './components/dashboard/Drawer';
 import Panel from './components/dashboard/Panel';
 import { makeStyles } from '@material-ui/core/styles';
 
+/**
+ * CSS definition
+ */
 const useStyles = makeStyles(theme => ({
     root: {
       display: 'flex',
     },
-    appBar: {
-      zIndex: theme.zIndex.drawer + 1,
-    },
-    toolbar: theme.mixins.toolbar,
-  }));
+}));
 
+/**
+ * Main app 
+ */
 function App (){
     const classes = useStyles();
     return (

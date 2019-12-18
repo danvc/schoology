@@ -79,14 +79,8 @@ function createRouteAPI(method, path, handler, options) {
  * @param {*} statusCode HTTP code
  */
 function createAPIResponse(h, type, data, id, statusCode) {
-
-    // if the data is an array.. formtat each element properly
-
-
-    // respect few recommendations from JSONAPI.org
-    return h.response(
-        Array.isArray(data) ? data.map(e => transformResponse(type, e, e._id)) : transformResponse(type, data, id)
-    ).code(statusCode)
+    // returns a new object in the JSONAPI.org 
+    return h.response(Array.isArray(data) ? data.map(e => transformResponse(type, e, e._id)) : transformResponse(type, data, id)).code(statusCode)
 }
 
 /**
