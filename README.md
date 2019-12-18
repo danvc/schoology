@@ -1,5 +1,12 @@
 # schoology
 
+## Prerequisites
+Dear reviewer, please, make sure to have `yarn` installed in your environment. To install it, please run:
+```
+npm install --global yarn
+```
+You'll also need the following CLI tools: `docker` and `docker-compose` to get it running properly.
+
 Adding a new course:
 ```
 curl -X POST \
