@@ -30,7 +30,18 @@ If everything wen't well, now you could access the `app` by opening the followin
 ![](https://i.ibb.co/qswbJjh/Kapture-2019-12-18-at-3-19-48.gif)
 
 
+## API methods
+All methods are served in the following URL path in the application: `/api/v1/` + `controller` which changes according the business (courses, classes, teachers, etc). The `v1` means the version of the current API, which could be deprecated later.
 
+For this presentation, we have one controller called `courses` and few CRUD methods offered by the URL `/api/v1/courses`.
+
+| URL                   |            Method              | Description                    |Payload                    |
+| --------------------- | ------------------------------ | ------------------------------ | --------------------------|
+| `/api/v1/courses`     | GET                            | Returns a list of courses      |                           |
+| `/api/v1/courses`     | POST                           | Add a new course               |`{ name: String, description: String}`
+| `/api/v1/courses/{id}`| DELETE                         | Remove a course by its id      |                           |
+| `/api/v1/courses/{id}`| GET                            | Find a course by its id        |                           |
+| `/api/v1/courses/search?q=`| GET                       | Search all courses by the name |                           |
 
 Adding a new course:
 ```
