@@ -24,6 +24,10 @@ The `building` process will move according these steps:
 - Installs all dependencies to build and deploy the server package for production;
 - Download and build all containers for the application. The `app` is using `MongoDB` as database and `Redis` for caching to speed up the API responses;
 - Move all config files inside the containers;
+- Populate the `MongoDB` with fake data.
+
+If everything wen't well, now you could access the `app` by opening the following url in your browser: `http://localhost:3000`. You will have access to the following page:
+
 
 echo Building React App && sleep 2 && cd app/ && yarn install && yarn build && cd .. && echo Building the Server environment && yarn install && docker-compose build && docker-compose up -d && echo Populating FAKE data && sleep 2 && docker exec -it NODE_WEBSERVER node ./config/generateFakeData.js &&  echo Fake data populated && sleep 1  && echo You are OK to go. Please, access http://localhost:3000"
 
