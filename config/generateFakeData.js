@@ -10,9 +10,13 @@ async function makeFakeData() {
     var i = 0;
     console.log('Generating ' + total + ' ' + CourseModel.modelName);
     while (i < 1000) {
-        const course = {name: faker.company.catchPhrase(), description: faker.company.catchPhraseDescriptor()};
-        console.log(i + 1, 'Adding: ', course);
-        new CourseModel(course).save();
+        try {
+            var course = {name: faker.company.catchPhrase(), description: faker.company.catchPhraseDescriptor()};
+            await new CourseModel(course).save();
+            console.log(i + 1, 'Adding: ', course);
+        } catch (error) {
+            console.log(error);
+        }
         i++;
     }    
     process.exit();

@@ -7,7 +7,7 @@ const connectionString = process.env.MONGO_DB || 'mongodb://localhost:27017/scho
 /**
  * Establishes a connectiion with Mongodb
  */
-async function connectDB() {
+async function connectDB(closeConnection) {
     // defines that the indexes should be created when added to the schema (inside each model)
     mongoose.set('useCreateIndex', true)
 
@@ -18,5 +18,4 @@ async function connectDB() {
         throw error;
     });
 }
-
 module.exports = connectDB
