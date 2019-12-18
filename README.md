@@ -13,11 +13,13 @@ Download the source code. You could download the source code by accessing it ove
 ```
 git clone https://github.com/DanZeuss/schoology.git
 ```
+It will download all the source code inside a folder named `schoology`.
 ### Second step
-Run the following command:
+Please, move to the `schoology` folder by running the command `cd schoology/` and then, run the following command:
 ```
 yarn build
 ```
+
 
 Adding a new course:
 ```
