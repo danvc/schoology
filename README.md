@@ -43,7 +43,7 @@ For this presentation, we have one controller called `courses` and few CRUD meth
 | `/api/v1/courses/{id}`| GET                            | Find a course by its id        |                           |
 | `/api/v1/courses/search?q=`| GET                       | Search all courses by the name |                           |
 
-Adding a new course:
+You could perform requests using cURL (Adds a new course):
 ```
 curl -X POST \
   http://localhost:3000/api/v1/courses \
@@ -59,7 +59,6 @@ curl -X POST \
 }'
 ```
 
-
 Search by all elements that contains the char `a`:
 ```
 curl -X GET \
@@ -70,3 +69,32 @@ curl -X GET \
   -H 'cache-control: no-cache'
 
 ```
+
+# The Architecture
+SchoologyApp was implemented having in mind a way to separate and test each layer and its dependencies in a way to speed up the deployment process. So, if something need to be changed in the front-end, it could be made easily without building or deploying something related to back-end and vice-versa. The project is structured in the following way:
+
+                
++ app (front-end layer);
+    + build (generated automatically by running the build command);
+    + public (static files such as `JavaScript`, `CSS`, `Images`, `Fonts`, `HTML`, etc;
+    + src (main app folders and files - React/Redux/Helpers/Consts/Config/etc);
+        + __tests__;
+        + components (which contains folders separated by its model business;
+            + account (example)
+            + courses (example)
+            + dashboard
++ config (databases settings);
++ data (generated automatically by the container for `db`);
++ src (core files);
+    * handlers (contain versioned folder/files that are most related to crud/business/logic/calc)
+        + v1
+            + classes (each folder is specific for its business)
+            + courses	
+            + students	
+        + v2
+        + v3
+    * models (contain database schema for each model)
+        + classesModel.js
+        + coursesModel.js
+
+    
