@@ -28,7 +28,7 @@ The `building` process will move according these steps:
 - Move all config files inside the containers;
 - Populate the `MongoDB` with fake data.
 
-If everything wen't well, now you could access the `app` by opening the following url in your browser: `http://localhost:3000`. You will have access to main page. The Search bar search for courses by using the `lazy search`technique. So you could be searching by characters that exists in the word, without writting it correctly.
+If everything wen't well, now you could access the `app` by opening the following url in your browser: `http://localhost:3000`. You will have access to main page. The Search bar search for courses by using the `lazy search`technique. So you could be searching by characters that exists in the word, without writting it correctly. The browser will only make requests after the user stop of typing after 400ms. Another approach that was taken was by using `Redis` to cache the data that was searched before in a way to improve the `app` performance.
 ![](https://i.ibb.co/qswbJjh/Kapture-2019-12-18-at-3-19-48.gif)
 
 
