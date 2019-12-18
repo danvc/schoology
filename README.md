@@ -7,6 +7,18 @@ npm install --global yarn
 ```
 You'll also need the following CLI tools: `docker` and `docker-compose` to get it running properly.
 
+## Steps to get the App running
+### First step
+Download the source code. You could download the source code by accessing it over this link: https://github.com/DanZeuss/schoology/archive/master.zip, or, using the `git` to clone it by running the command:
+```
+git clone https://github.com/DanZeuss/schoology.git
+```
+### Second step
+Run the following command:
+```
+yarn build
+```
+
 Adding a new course:
 ```
 curl -X POST \
