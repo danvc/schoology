@@ -31,7 +31,7 @@ If everything wen't well, now you could access the `app` by opening the followin
 
 
 ## API methods
-All methods are served in the following URL path in the application: `/api/v1/` + `controller` which changes according the business (courses, classes, teachers, etc). The `v1` means the version of the current API, which could be deprecated later. The idea is to follow the best practices described in https://jsonapi.org
+All methods are served in the following URL path in the application: `/api/v1/` + `controller` which changes according the business (courses, classes, teachers, etc). The `v1` means the version of the current API, which could be deprecated later. The idea is to follow the best practices for verbs/paths/HTTP codes described in https://jsonapi.org.
 
 For this presentation, we have one controller called `courses` and few CRUD methods offered by the URL `/api/v1/courses`.
 
@@ -120,3 +120,9 @@ SchoologyApp was implemented having in mind a way to separate and test each laye
             + v3
         + lib (contains helpers for tests);
 + common files (git, docker, json, etc);
+
+# Dev environment
+To start the dev environment, we need to start the `MongoDB` and `Redis` container. For this purpose, run the command:
+```
+docker-compose up -d db redis
+```
